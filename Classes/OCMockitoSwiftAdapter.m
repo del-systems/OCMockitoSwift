@@ -87,9 +87,10 @@ static const char *selectorType = ":";
                                             forSelector:selector
                                           withArguments:arguments];
     [invocation invoke];
-    id invocationReturnValue = nil;
+    void* invocationReturnValue = nil;
     [invocation getReturnValue:&invocationReturnValue];
-    [given(invocationReturnValue) willReturn:returnValue];
+    id invocationReturnValueObjC = (__bridge id) invocationReturnValue;
+    [given(invocationReturnValueObjC) willReturn:returnValue];
 }
 
 + (void)given:(id)mock

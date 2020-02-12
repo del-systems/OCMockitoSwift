@@ -23,8 +23,10 @@
 #ifndef OCMockitoSwift_h
 #define OCMockitoSwift_h
 
-#import <OCMockito/OCMockito.h>
-#import <OCHamcrest/OCHamcrest.h>
+#import <Foundation/Foundation.h>
+
+FOUNDATION_EXPORT double OCMockitoSwiftNumber;
+FOUNDATION_EXPORT const unsigned char OCMockitoSwiftVersionString[];
 
 #import "OCMockitoSwiftAdapter.h"
 

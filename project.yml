@@ -1,0 +1,11 @@
+name: OCMockitoSwift
+targets:
+  OCMockitoSwift:
+    type: framework
+    platform: iOS
+    deploymentTarget: "8.0"
+    sources:
+      - Classes
+    dependencies:
+      - carthage: OCMockito
+      - carthage: OCHamcrest
